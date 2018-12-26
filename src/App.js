@@ -22,7 +22,20 @@ const movies = [
 ]
 
 class App extends Component {
+
+  /*
+    - Render: componentWillMount() -> render() -> componentDidMount()
+    - Update: componentWillReceiveProps() -> shouldComponentUpdate() == true
+              -> componentWillUpdate -> render() -> componentDidMount()
+  */
+
+  componentWillMount() {
+    console.log('= componentWillMount =');
+  }
+
   render() {
+    console.log('= render =');
+
     return (
       <div className="App">
         {movies.map((movie, index) => {
@@ -31,6 +44,11 @@ class App extends Component {
       </div>
     );
   }
+
+  componentDidMount() {
+    console.log('= componentDidMount =');
+  }
+
 }
 
 export default App;

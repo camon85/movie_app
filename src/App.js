@@ -31,6 +31,16 @@ class App extends Component {
 
   componentWillMount() {
     console.log('= componentWillMount =');
+    setTimeout(() => {
+      this.setState({
+        greeting: 'Hello again!'
+      })
+    }, 2000);
+  }
+
+
+  state = {
+    greeting: 'hello!'
   }
 
   render() {
@@ -38,6 +48,7 @@ class App extends Component {
 
     return (
       <div className="App">
+        {this.state.greeting}
         {movies.map((movie, index) => {
           return <Movie title={movie.title} poster={movie.poster} key={index} />
         })}

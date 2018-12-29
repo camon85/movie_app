@@ -1,5 +1,6 @@
 {
   "name": "movie_app",
+  "homepage": "https://camon85.github.io/movie_app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,11 +9,16 @@
     "react-lines-ellipsis": "^0.14.0",
     "react-scripts": "2.1.2"
   },
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -23,4 +29,5 @@
     "not ie <= 11",
     "not op_mini all"
   ]
+  
 }
